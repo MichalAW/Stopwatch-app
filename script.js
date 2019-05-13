@@ -22,9 +22,9 @@ class Stopwatch {
         return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
     };
 
-    startButton() {}
+    start() {}
 
-    stopButton() {}
+    stop() {}
 }
 
 function pad0(value) {

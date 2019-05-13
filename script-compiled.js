@@ -34,11 +34,11 @@ var Stopwatch = function () {
             return pad0(times.minutes) + ':' + pad0(times.seconds) + ':' + pad0(Math.floor(times.miliseconds));
         }
     }, {
-        key: 'startButton',
-        value: function startButton() {}
+        key: 'start',
+        value: function start() {}
     }, {
-        key: 'stopButton',
-        value: function stopButton() {}
+        key: 'stop',
+        value: function stop() {}
     }]);
 
     return Stopwatch;
