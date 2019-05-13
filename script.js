@@ -43,4 +43,5 @@ let stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', () => stopwatch.stop());
 
 const stopwatch = new Stopwatch(
-document.querySelector('.stopwatch'));
+    document.querySelector('.stopwatch'));
+
