@@ -33,6 +33,12 @@ var Stopwatch = function () {
         value: function format(times) {
             return pad0(times.minutes) + ':' + pad0(times.seconds) + ':' + pad0(Math.floor(times.miliseconds));
         }
+    }, {
+        key: 'startButton',
+        value: function startButton() {}
+    }, {
+        key: 'stopButton',
+        value: function stopButton() {}
     }]);
 
     return Stopwatch;
@@ -40,13 +46,12 @@ var Stopwatch = function () {
 
 function pad0(value) {
     var result = value.toString();
+
     if (result.length < 2) {
         result = '0' + result;
     }
     return result;
 }
-
-var stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
 
 var startButton = document.getElementById('start');
 startButton.addEventListener('click', function () {
@@ -57,3 +62,5 @@ var stopButton = document.getElementById('stop');
 stopButton.addEventListener('click', function () {
     return stopwatch.stop();
 });
+
+var stopwatch = new Stopwatch(document.querySelector('.stopwatch'));

@@ -4,7 +4,7 @@ class Stopwatch {
         this.display = display;
         this.reset();
         this.print(this.times);
-    }
+    };
 
     reset() {
         this.times = {
@@ -12,15 +12,19 @@ class Stopwatch {
             seconds: 0,
             miliseconds: 0
         };
-    }
+    };
 
     print() {
         this.display.innerText = this.format(this.times);
-    }
+    };
 
     format(times) {
         return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
-    }
+    };
+
+    startButton() {}
+
+    stopButton() {}
 }
 
 function pad0(value) {
